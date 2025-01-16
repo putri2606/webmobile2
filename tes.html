@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Email</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f6f9;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Send Email</h1>
+        
+        <label>Nama</label>
+        <input type="text" id="sendername">
+        
+        <label>To (Email)</label>
+        <input type="text" id="to">
+        
+        <label>Perjalanan</label>
+        <input type="text" id="subject">
+        
+        <label>Reply To (Email)</label>
+        <input type="text" id="replyto">
+        
+        <label>No. Telp</label>
+        <input type="text" id="phone">
+        
+        <label>Pilihan Destinasi</label>
+        <select id="destination">
+            <option value="umrah">Umrah</option>
+            <option value="haji">Haji</option>
+            <option value="travel">Travel</option>
+        </select>
+        
+        <label>Tanggal Keberangkatan</label>
+        <input type="date" id="departure_date">
+        
+        <label>Message</label>
+        <textarea id="message"></textarea>
+        
+        <button onclick="sendMail();">Send</button>
+    </div>
+
+    <script>
+        function sendMail() {
+            (function(){
+                emailjs.init("Fn7udjBvKk_6FXSLj");
+            })();
+
+            var params = {
+                sendername: document.querySelector("#sendername").value,
+                to: document.querySelector("#to").value,
+                subject: document.querySelector("#subject").value,
+                replyto: document.querySelector("#replyto").value,
+                phone: document.querySelector("#phone").value,
+                destination: document.querySelector("#destination").value,
+                departure_date: document.querySelector("#departure_date").value,
+                message: document.querySelector("#message").value
+            };
+
+            var serviceID = "service_nx4ccm3";
+            var templateID = "template_0c6xflg";
+
+            emailjs.send(serviceID, templateID, params)
+            .then(res => {
+                alert("Email Sent Successfully");
+            })
+            .catch(error => {
+                console.error("Failed to send email:", error);
+                alert("Failed to send email. Please try again.");
+            });
+        }
+    </script>
+</body>
+</html>

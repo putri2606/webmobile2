@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran Umrah</title>
+  <link href="img/LOGO.jpg" rel="icon">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.header {
+  background: linear-gradient(to right, #7AB730, #7AB730);
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+  color: #fff;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #7AB730, #7AB730);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #7AB730, #3c5aa6);
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+textarea {
+  resize: none;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.centered-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.expand-btn {
+  width: 90px;
+  padding: 15px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #3c5aa6, #3c5aa6);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expand-btn:hover {
+  background: linear-gradient(135deg, #3c5aa6, #3c5aa6);
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Formulir Pendaftaran Umroh/Haji</h1>
+    </div>
+    <form id="spreadsheetForm" action="https://script.google.com/macros/s/AKfycbzIdjkrHH_4FT7_ZWCpsfXbjY7f2xtNHWrv5rdiCYkqJ3Ov88i_VZJ2FG6rWi0pcynb/exec" method="post">
+      <div class="form-group">
+        <label for="ktp">KTP:</label>
+        <input type="number" id="ktp" name="ktp" placeholder="KTP" required>
+      </div>
+      <div class="form-group">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required>
+      </div>
+      <div class="form-group">
+        <label for="ttl">Tanggal Lahir:</label>
+        <input type="date" id="ttl" name="ttl" required>
+      </div>
+      <div class="form-group">
+        <label for="jk">Jenis Kelamin:</label>
+        <select id="jk" name="jk" required>
+          <option selected disabled>Pilih Jenis Kelamin</option>
+          <option value="Laki-Laki">Laki-Laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="wn">Warganegara:</label>
+        <input type="text" id="wn" name="wn" placeholder="Warganegara" required>
+      </div>
+      <div class="form-group">
+        <label for="alamat">Alamat:</label>
+        <input type="text" id="alamat" name="alamat" placeholder="Alamat" required>
+      </div>
+      <div class="form-group">
+        <label for="dsk">Desa / Kelurahan:</label>
+        <input type="text" id="dsk" name="dsk" placeholder="Desa / Kelurahan" required>
+      </div>
+      <div class="form-group">
+        <label for="kec">Kecamatan:</label>
+        <input type="text" id="kec" name="kec" placeholder="Kecamatan" required>
+      </div>
+      <div class="form-group">
+        <label for="alamat">Kabupaten / Kota:</label>
+        <input type="text" id="kk" name="kk" placeholder="Kabupaten / Kota" required>
+      </div>
+      <div class="form-group">
+        <label for="prov">Provinsi:</label>
+        <input type="text" id="prov" name="prov" placeholder="Provinsi" required>
+      </div>
+      <div class="form-group">
+        <label for="phone1">Telpon Kantor:</label>
+        <input type="tel" id="phone1" name="phone1" placeholder="Telpon Kantor" pattern="[0-9]{10,12}" required>
+      </div>
+      <div class="form-group">
+        <label for="phone2">Telpon Pribadi:</label>
+        <input type="tel" id="phone2" name="phone2" placeholder="Telpon Pribadi" pattern="[0-9]{10,12}" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="dp">Data Paspor:</label>
+        <input type="text" id="dp" name="dp" placeholder="Data Paspor" required>
+      </div>
+      <div class="form-group">
+        <label for="nay">Nama Karyawan:</label>
+        <input type="text" id="nay" name="nay" placeholder="Nama Karyawan" required>
+      </div>
+      <div class="form-group">
+        <label for="jbtn">Jabatan:</label>
+        <input type="text" id="jbtn" name="jbtn" placeholder="Jabatan" required>
+      </div>
+      <div class="form-group">
+        <label for="nbnk">Nama Bank:</label>
+        <input type="text" id="nbnk" name="nbnk" placeholder="Nama Bank" required>
+      </div>
+      <div class="form-group">
+        <label for="atnm">Atas Nama:</label>
+        <input type="text" id="atnm" name="atnm" placeholder="Atas Nama" required>
+      </div>
+      <div class="form-group">
+        <label for="ckcp">Cabang / KCP:</label>
+        <input type="text" id="ckcp" name="ckcp" placeholder="Cabang / KCP" required>
+      </div>
+      <div class="form-group">
+        <label for="pembayaran">Pembayaran:</label>
+        <select id="pembayaran" name="pembayaran" required>
+          <option selected disabled>Pilih Pembayaran</option>
+          <option value="Cash/Tunai">Cash/Tunai</option>
+          <option value="Transfer">Transfer</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Note:</label>
+        <textarea id="message" name="message" placeholder="Pesan" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="departure_date">Tanggal:</label>
+        <input type="date" id="departure_date" name="departure_date" required>
+      </div>
+      <button type="submit">Kirim Data</button>
+    </form>
+  </div>
+  <div class="centered-btn">
+    <button class="expand-btn" onclick="window.location.href='index.html'">Home</button>
+  </div>
+  <div id="footer">© 2024 - Designed PT. Novavil Mutiara Utama</div>
+
+  <script>
+    const form = document.getElementById("spreadsheetForm");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            alert("Data berhasil dikirim!");
+            form.reset();
+          } else {
+            alert("Gagal mengirim data. Silakan coba lagi.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Terjadi kesalahan. Silakan coba lagi.");
+        });
+    });
+
+
+  // Set tanggal otomatis ke input departure_date
+  window.onload = () => {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); // Bulan dimulai dari 0
+    const dd = String(today.getDate()).padStart(2, '0');
+
+    const formattedDate = `${yyyy}-${mm}-${dd}`;
+    document.getElementById("departure_date").value = formattedDate;
+  };
+
+  </script>
+</body>
+
+</html>

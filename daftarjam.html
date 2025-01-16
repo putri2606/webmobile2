@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Jamaah Umrah & Haji</title>
+</head>
+<body>
+  <h2>Formulir Pendaftaran Jamaah Umrah, Haji, dan Travel</h2>
+  <form id="registrationForm" action="submit_form.php" method="POST">
+    <label for="name">Nama Lengkap:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="address">Alamat:</label><br>
+    <textarea id="address" name="address" required></textarea><br><br>
+
+    <label for="phone">Nomor Telepon:</label><br>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="service">Jenis Layanan:</label><br>
+    <select id="service" name="service" required>
+      <option value="umrah">Umrah</option>
+      <option value="haji">Haji</option>
+      <option value="travel">Travel</option>
+    </select><br><br>
+
+    <label for="departure">Tanggal Keberangkatan:</label><br>
+    <input type="date" id="departure" name="departure" required><br><br>
+
+    <input type="submit" value="Daftar">
+  </form>
+</body>
+</html>
